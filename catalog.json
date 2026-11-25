@@ -3,11 +3,11 @@
     {
       "slug": "blank-core",
       "name": "Blank Core",
-      "description": "Socle Blank Light : espace propriétaire en façade (/tsuki), centre de contrôle des extensions Blank, rôles d'équipe, réglages du site, messages de contact.",
-      "version": "0.2.2",
+      "description": "Socle Blank Light : espace propriétaire en façade (/tsuki), centre de contrôle des extensions Blank (wp-admin), rôles d'équipe, réglages du site, messages de contact.",
+      "version": "0.3.0",
       "requires": [],
-      "zip": "zips/blank-core-0.2.2.zip",
-      "sha256": "0fa36dc50e4ba76ce3868a30b6adf3816fa29d0f464e690b837717010e1aff46"
+      "zip": "zips/blank-core-0.3.0.zip",
+      "sha256": "0b8562e2fa55c9dcce633c3eb7edef072c238397a124b6ef758da80a1db2c58b"
     }
   ]
 }
