@@ -1,0 +1,37 @@
+name: Catalogue
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "zips/**"
+      - "tools/build_catalog.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: catalogue
+  cancel-in-progress: false
+
+jobs:
+  catalogue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Vérifier les zips et reconstruire catalog.json
+        run: python3 tools/build_catalog.py
+
+      - name: Enregistrer le catalogue
+        run: |
+          git add -A zips catalog.json
+          if git diff --cached --quiet; then
+            echo "Catalogue déjà à jour."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Catalogue mis à jour"
+          git push
