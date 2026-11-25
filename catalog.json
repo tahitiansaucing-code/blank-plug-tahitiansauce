@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    {
+      "slug": "blank-core",
+      "name": "Blank Core",
+      "description": "Socle Blank Light : espace propriétaire en façade (/tsuki), centre de contrôle des extensions Blank, rôles d'équipe, réglages du site, messages de contact.",
+      "version": "0.2.0",
+      "requires": [],
+      "zip": "zips/blank-core-0.2.0.zip",
+      "sha256": "a522315f3dc21609c06edf1bb5294c0863596502fd7cd43549ff806ba706209a"
+    }
+  ]
+}
